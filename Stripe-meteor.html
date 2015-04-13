@@ -1,0 +1,29 @@
+<head>
+  <title>Stripe Integration</title>
+</head>
+
+<body>
+  <div class="outer">
+    <div class="logo"></div>
+    <h1 class="title">Stripe</h1>
+    <div class="subtitle">Select an item to purchase</div>
+    {{> list}}
+  </div>
+</body>
+
+<template name="list">
+    <li class="leaderboard">
+      {{#each items}}
+        {{> item}}
+      {{/each}}
+    </li>
+</template>
+
+<template name="item">
+    <li class="player {{selected}}">
+        <span id = "it" class="name">{{name}}</span>
+        <span class="price">{{price}}</span>
+        <input type="button" class="buy" value="Buy">
+    </li>
+</template>
+
